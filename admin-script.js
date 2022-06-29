@@ -178,7 +178,7 @@ function addItem() {
     listing: document.querySelector("#Listing").value,
   };
   houses.push(home);
-
+  localStorage.setItem("houses", JSON.stringify(houses));
   showTable(houses);
   console.log(houses);
 }
@@ -206,6 +206,7 @@ function saveItem(id) {
   document.querySelector(`#Img${id}`).disabled = true;
   document.querySelector(`#Price${id}`).disabled = true;
   document.querySelector(`#Listing${id}`).disabled = true;
+  localStorage.setItem("houses", JSON.stringify(houses));
 }
 
 // Delete Function
