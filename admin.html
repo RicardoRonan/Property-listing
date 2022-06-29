@@ -15,13 +15,13 @@
     <script src="https://kit.fontawesome.com/53a149f81a.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/admin-styles.css">
   </head>
-  <body>
+  <body class="bg-dark">
     <div class="addItem">
       <!-- Button trigger modal -->
 
       <button
         type="button"
-        class="btn btn-primary m-4"
+        class="btn btn-dark m-4"
         data-bs-toggle="modal"
         data-bs-target="#exampleModal"
       >
@@ -36,9 +36,9 @@
         aria-labelledby="exampleModalLabel"
         aria-hidden="true"
       >
-        <div class="modal-dialog">
+        <div class="modal-dialog bg-dark">
           <div class="modal-content">
-            <div class="modal-header">
+            <div class="modal-header bg-dark text-light">
               <h5 class="modal-title" id="exampleModalLabel">Add your Listing</h5>
               <button
                 type="button"
@@ -47,7 +47,7 @@
                 aria-label="Close"
               ></button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body bg-dark text-light">
                 <form onsubmit=" addItem();">
               <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label"
@@ -74,7 +74,7 @@
               <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label"
                   >Bedrooms</label>
-               <select id="Bedrooms">
+               <select  class="btn form-control form-select bg-dark text-light" id="Bedrooms">
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
@@ -154,7 +154,8 @@
             </form>
               <div class="mb-3"></div>
             </div>
-            <div class="modal-footer">
+            <div class="modal-footer bg-dark text-light
+            ">
               <button
                 type="button"
                 class="btn btn-secondary"
@@ -171,7 +172,7 @@
     </div>
           
 
- <table class="table">
+ <table class="table table-dark table-hover">
   <thead>
     <tr>
       <th scope="col">ID</th>
@@ -186,6 +187,7 @@
       <th scope="col">Price</th>
       <th scope="col">Listing</th>
       <th scope="col">Options </th>
+      <th scope="col"></th>
     </tr>
   </thead>
   <tbody class="table-group-divider" id="displayTable">
