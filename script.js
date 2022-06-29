@@ -129,7 +129,8 @@ function showHouses(houses) {
   document.querySelector("#houses-listing").innerHTML = "";
   houses.forEach((home, i) => {
     document.querySelector("#houses-listing").innerHTML += `
-    <div class="card p-5 mb-4 text-center shadow">
+    <div class="col-6">
+    <div id="listing-card" class="card p-2 m-1 mb-4 text-center shadow">
     <div class="img-container">
     <img class="img-fluid" src=${home.img} id="img">
     </div>
@@ -156,6 +157,7 @@ function showHouses(houses) {
 </div>
     <div class="col-4">
     <p> <i class="fa-solid fa-building p-1"></i>${home.type}</p>
+    </div>
     </div>
     </div>
         `;

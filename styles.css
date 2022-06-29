@@ -2,6 +2,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+html,
+body {
+  overflow-x: hidden;
+  background-color: #343a40;
 }
 section {
   min-height: 100vh;
@@ -34,6 +40,9 @@ section {
 #card-content {
   opacity: 1;
 }
+#listing-card {
+  height: 35rem;
+}
 #search-button {
   width: 5rem;
 }
@@ -41,16 +50,20 @@ section {
   display: flex;
   justify-content: center;
 }
+div#houses-listing {
+  display: flex;
+  flex-wrap: wrap;
+}
 #img {
-  width: 40rem;
+  width: 20rem;
   height: auto;
 }
-#row {
+/* #row {
   --bs-gutter-x: -64.5rem;
 }
 #row-2 {
   --bs-gutter-x: -47.5rem;
-}
+} */
 @media only screen and (max-width: 992px) {
   #landing {
     min-height: 80vh;
@@ -64,6 +77,9 @@ section {
     width: 80%;
     height: 26rem;
     margin-top: -8rem;
+  }
+  input {
+    width: 100%;
   }
 }
 @media only screen and (max-width: 1285.6px) {
