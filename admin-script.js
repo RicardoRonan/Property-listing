@@ -153,7 +153,7 @@ function showTable(houses) {
     <td><input id="Listing${home.id}"${home.listing}  value=${home.listing} disabled/></td>
     <td><i class="fa-solid fa-delete-left"  onclick="delItem(${home.id})"></i></td>
     <td><i class="fa-solid fa-pen-to-square" id="edit${home.id}" onclick="editItem(${home.id})"></i></td>
-    <td><i class="fa-solid fa-floppy-disk" id="save${home.id}" onclick="saveItem(${home.id})"></i></td>
+    <td><i class="fa-solid fa-floppy-disk" id="save${home.id}" onclick="saveItem(${home.id}); permanantItem()"></i></td>
     </tr>
     `;
   });
@@ -195,6 +195,9 @@ function editItem(id) {
   document.querySelector(`#Price${id}`).disabled = false;
   document.querySelector(`#Listing${id}`).disabled = false;
 }
+houses.push(home);
+localStorage.setItem("houses", JSON.stringify(houses));
+showTable(houses);
 function saveItem(id) {
   document.querySelector(`#Title${id}`).disabled = true;
   document.querySelector(`#Location${id}`).disabled = true;
@@ -207,7 +210,26 @@ function saveItem(id) {
   document.querySelector(`#Price${id}`).disabled = true;
   document.querySelector(`#Listing${id}`).disabled = true;
   localStorage.setItem("houses", JSON.stringify(houses));
+  showTable(houses);
 }
+
+// let data = document.getElementById("displayTable"),
+//   btn = document.getElementById("edit"),
+//   trs = displayTable.querySelectorAll("td");
+
+// btn.addEventListener("click", function (e) {
+//   trs.forEach(function (td) {
+//     td.toggleAttribute("contenteditable");
+//   });
+
+//   if (trs[0].hasAttribute("contenteditable")) {
+//     // Currently editing, change the button
+//     btn.innerText = "Click here to Save";
+//   } else {
+//     // We just "saved". run "save functions" here
+//     btn.innerText = "Click here to Edit";
+//   }
+// });
 
 // Delete Function
 function delItem(id) {

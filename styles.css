@@ -9,6 +9,9 @@ body {
   overflow-x: hidden;
   background-color: #343a40;
 }
+[contenteditable] {
+  outline: 1px solid #ccc;
+}
 section {
   min-height: 100vh;
 }
