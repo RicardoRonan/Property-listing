@@ -22,6 +22,7 @@ section {
 #title-conatainer {
   margin-top: 3rem;
 }
+.btn { border-radius: 1px solid white;} 
 
 #landing {
   background-image: url(/assets/images/pexels-dom-j-303059.jpg);
