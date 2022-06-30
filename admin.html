@@ -27,6 +27,7 @@
       >
         Add Listing
     </button>
+    
 
       <!-- Modal -->
       <div
@@ -85,7 +86,7 @@
               <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label"
                   >Bathrooms</label>
-               <select id="Bathrooms">
+               <select  class="btn form-control form-select bg-dark text-light" id="Bathrooms">
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
@@ -95,7 +96,7 @@
               <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label"
                   >Garage</label>
-               <select id="Garage">
+               <select class="btn form-control form-select bg-dark text-light" id="Garage">
                    <option>1</option>
                    <option>2</option>
                    <option>3</option>
@@ -115,14 +116,14 @@
               <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label"
                   >Type</label>
-                <select id="Type">
+                <select class="btn form-control form-select bg-dark text-light" id="Type">
                     <option>Apartment</option>
                     <option>Studio</option>
                 </select>
               </div>
               <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label"
-                  >Img</label>
+                  >Img-Url</label>
                 <input
                   type="text"
                   class="form-control"
@@ -143,7 +144,7 @@
               <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label"
                   >Listing</label>
-               <select  id="Listing">
+               <select  class="btn form-control form-select bg-dark text-light" id="Listing">
                 <option>For Rent</option>
                 <option>For Sale</option>
                </select>
@@ -155,7 +156,7 @@
               <div class="mb-3"></div>
             </div>
             <div class="modal-footer bg-dark text-light
-            ">
+             ">
               <button
                 type="button"
                 class="btn btn-secondary"
@@ -174,23 +175,29 @@
 
  <table class="table table-dark table-hover">
   <thead>
-    <tr>
-      <th scope="col">ID</th>
-      <th scope="col">Title</th>
-      <th scope="col">Location</th>
-      <th scope="col">Bedrooms</th>
-      <th scope="col">Bathrooms</th>
-      <th scope="col">Garage</th>
-      <th scope="col">Area</th>
-      <th scope="col">Type</th>
-      <th scope="col">Img</th>
-      <th scope="col">Price</th>
-      <th scope="col">Listing</th>
-      <th scope="col">Options </th>
-      <th scope="col"></th>
+    <tr id="table-row">
+        <div class="row">
+            <div class="col-6">
+                <th scope="col">ID</th>
+                <th scope="col">Title</th>
+                <th scope="col">Location</th>
+                <th scope="col">Bedrooms</th>
+                <th scope="col">Bathrooms</th>
+                <th scope="col">Garage</th>
+            </div>
+            <div class="col-6"></div>
+                <th scope="col">Area</th>
+                <th scope="col">Type</th>
+                <th scope="col">Img</th>
+                <th scope="col">Price</th>
+                <th scope="col">Listing</th>
+                <th scope="col">Options </th>
+            </div>
     </tr>
+    </div>
   </thead>
   <tbody class="table-group-divider" id="displayTable">
+
     
   </tbody>
 </table>

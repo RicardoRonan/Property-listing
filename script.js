@@ -3,8 +3,7 @@ let houses = JSON.parse(localStorage.getItem("houses"))
   : [
       {
         title: "Light and Modern Apartment",
-        location:
-          "Gg. Ceroring, Tibubiu, Kec. Kerambitan, Kabupaten Tabanan, Bali 82161, Indonesia",
+        location: "Indonesia",
         bedrooms: 3,
         bathrooms: 2,
         garage: 1,
@@ -16,7 +15,7 @@ let houses = JSON.parse(localStorage.getItem("houses"))
       },
       {
         title: "Design Apartment",
-        location: "Binzhou, Shaanxi, Xianyang, Shaanxi, China",
+        location: "China",
         bedrooms: 2,
         bathrooms: 1,
         garage: 1,
@@ -28,7 +27,7 @@ let houses = JSON.parse(localStorage.getItem("houses"))
       },
       {
         title: "Studio",
-        location: "Kampung Gubah, 85000 Segamat District, Johor, Malaysia",
+        location: "Malaysia",
         bedrooms: 3,
         bathrooms: 1,
         garage: 1,
@@ -40,7 +39,7 @@ let houses = JSON.parse(localStorage.getItem("houses"))
       },
       {
         title: "Open plan Studio",
-        location: "Wugong County, Xianyang, Shaanxi, China",
+        location: "China",
         bedrooms: 1,
         bathrooms: 2,
         garage: 1,
@@ -52,8 +51,7 @@ let houses = JSON.parse(localStorage.getItem("houses"))
       },
       {
         title: "Apartment Nice View",
-        location:
-          "Saint Francis de Assisi Church, City of Naga, Cebu, Philippines",
+        location: "Philippines",
         bedrooms: 3,
         bathrooms: 1,
         garage: 1,
@@ -65,8 +63,7 @@ let houses = JSON.parse(localStorage.getItem("houses"))
       },
       {
         title: "White and Gold styled Apartment",
-        location:
-          "Mandalaguna, Salopa, Tasikmalaya Regency, West Java, Indonesia",
+        location: "Indonesia",
         bedrooms: 4,
         bathrooms: 2,
         garage: 2,
@@ -78,7 +75,7 @@ let houses = JSON.parse(localStorage.getItem("houses"))
       },
       {
         title: "Retro Styled Apartment",
-        location: "Sant Nagar, Saharsa, Bihar 852201, India",
+        location: "India",
         bedrooms: 1,
         bathrooms: 1,
         garage: 0,
@@ -90,7 +87,7 @@ let houses = JSON.parse(localStorage.getItem("houses"))
       },
       {
         title: "Spacious Apartment",
-        location: "Changjiang District, Jingdezhen, Jiangxi, China",
+        location: "China",
         bedrooms: 4,
         bathrooms: 3,
         garage: 2,
@@ -102,7 +99,7 @@ let houses = JSON.parse(localStorage.getItem("houses"))
       },
       {
         title: "Open Planned Aesthetic Apartment ",
-        location: "Al Busayrah, Syria",
+        location: "Syria",
         bedrooms: 2,
         bathrooms: 2,
         garage: 1,
@@ -114,7 +111,7 @@ let houses = JSON.parse(localStorage.getItem("houses"))
       },
       {
         title: " Modern Simplistic Apartment",
-        location: "Manuel del Valle Sr., Quezon, Philippines",
+        location: "Philippines",
         bedrooms: 2,
         bathrooms: 1,
         garage: 0,
@@ -131,7 +128,7 @@ function showHouses(houses) {
   houses.forEach((home, i) => {
     document.querySelector("#houses-listing").innerHTML += `
     <div class="col-6">
-    <div id="listing-card" class="card p-2 m-1 mb-4 text-center shadow">
+    <div id="listing-card" class="card bg-dark text-light p-2 m-1 mb-4 text-center shadow">
     <div class="img-container">
     <img class="img-fluid" src=${home.img} id="img">
     </div>
@@ -169,3 +166,125 @@ console.log(houses);
 localStorage.setItem("houses-listing", JSON.stringify(houses));
 // document.write(houses-listing);
 showHouses(houses);
+
+// Filter
+
+// Filter All
+function allCities() {
+  showHouses(houses);
+}
+
+// Filter City
+function displayIndonesia() {
+  const display = houses.filter((house) => {
+    return house.location === "Indonesia";
+  });
+  showHouses(display);
+}
+function displayChina() {
+  const display = houses.filter((house) => {
+    return house.location === "China";
+  });
+  showHouses(display);
+}
+function displayMalaysia() {
+  const display = houses.filter((house) => {
+    return house.location === "Malaysia";
+  });
+  showHouses(display);
+}
+function displayPhilippines() {
+  const display = houses.filter((house) => {
+    return house.location === "Philippines";
+  });
+  showHouses(display);
+}
+
+function allTypes() {
+  showHouses(houses);
+}
+// Filter Type
+function displayStudio() {
+  const show = houses.filter((house) => {
+    return house.type === "Studio";
+  });
+  showHouses(show);
+}
+function displayApartment() {
+  const show = houses.filter((house) => {
+    return house.type === "Apartment";
+  });
+  showHouses(show);
+}
+
+// Filter Bedrooms
+function allBedrooms() {
+  showHouses(houses);
+}
+function displayBedroom1() {
+  const display = houses.filter((house) => {
+    return house.bedrooms === 1;
+  });
+  showHouses(display);
+}
+function displayBedroom2() {
+  const display = houses.filter((house) => {
+    return house.bedrooms === 2;
+  });
+  showHouses(display);
+}
+function displayBedroom3() {
+  const display = houses.filter((house) => {
+    return house.bedrooms === 3;
+  });
+  showHouses(display);
+}
+function displayBedroom4() {
+  const display = houses.filter((house) => {
+    return house.bedrooms === 4;
+  });
+  showHouses(display);
+}
+// Filter Garages
+function allgarages() {
+  showHouses(houses);
+}
+
+function displayGarage1() {
+  const display = houses.filter((house) => {
+    return house.garage === 1;
+  });
+  showHouses(display);
+}
+function displayGarage2() {
+  const display = houses.filter((house) => {
+    return house.garage === 2;
+  });
+  showHouses(display);
+}
+function displayGarage3() {
+  const display = houses.filter((house) => {
+    return house.garage === 3;
+  });
+  showHouses(display);
+}
+// function sortList() {
+//   let list, i, switching, b, shouldSwitch;
+//   list = document.getElementById("houses-listing");
+//   switching = true;
+//   while (switching) {
+//     switching = false;
+//     b = list.getElementsByTagName("div");
+//     for (i = 0; i < b.length - 1; i++) {
+//       shouldSwitch = false;
+//       if (b[i].innerHTML.toLowerCase() > b[i + 1].innerHTML.toLowerCase()) {
+//         shouldSwitch = true;
+//         break;
+//       }
+//     }
+//     if (shouldSwitch) {
+//       b[i].parentNode.insertBefore(b[i + 1], b[i]);
+//       switching = true;
+//     }
+//   }
+// }

@@ -37,7 +37,7 @@ section {
   margin-left: 10%;
   margin-right: 2rem;
   width: 80%;
-  height: 10rem;
+  height: 12rem;
   margin-top: -4rem;
 }
 #card-content {
@@ -78,14 +78,30 @@ div#houses-listing {
     margin-left: 10%;
     margin-right: 2rem;
     width: 80%;
-    height: 26rem;
+    height: 29rem;
     margin-top: -8rem;
   }
   input {
     width: 100%;
   }
+  div#houses-listing {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  #listing-card {
+    height: 35rem;
+    width: 20rem;
+  }
 }
 @media only screen and (max-width: 1285.6px) {
+  #card {
+    margin-left: 10%;
+    margin-right: 2rem;
+    width: 80%;
+    height: 29rem;
+    margin-top: -8rem;
+  }
   #row {
     --bs-gutter-x: 1.5rem;
   }
