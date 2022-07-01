@@ -8,6 +8,9 @@
   font-family: new-font;
   src: url(/assets/fonts/Finlandica-Italic-VariableFont_wght.ttf);
 }
+#section-text {
+  text-shadow: 2px 2px 2px black;
+}
 
 html,
 body {
@@ -22,7 +25,9 @@ section {
   min-height: 100vh;
 }
 #title {
-  text-shadow: 3px 3px 3px black;
+  font-weight: 100;
+  font-size: 5rem;
+  text-shadow: 4px 4px 4px black;
   margin-top: 15rem;
 }
 #title-container {
@@ -46,7 +51,8 @@ section {
   margin-left: 10% !important;
   margin-right: 2rem;
   width: 80%;
-  height: 16rem;
+  /* height: 16rem; */
+  height: fit-content;
   margin-top: -4rem !important;
 }
 #card-content {
@@ -70,6 +76,15 @@ div#houses-listing {
   width: 20rem;
   height: auto;
 }
+
+#img:hover {
+  zoom: 115%;
+  transition: all 3s ease-in;
+}
+#listing-card:hover {
+  height: 35rem;
+}
+
 .card {
   --bs-card-spacer-y: 1rem;
   --bs-card-spacer-x: 1rem;
@@ -133,6 +148,9 @@ div#houses-listing {
     flex-direction: column;
     margin-left: -0.5rem;
   }
+  #listing-card:hover {
+    zoom: 100%;
+  }
 }
 @media only screen and (max-width: 1285.6px) {
   #card {
@@ -154,7 +172,12 @@ iframe {
   height: 20rem;
   filter: invert();
 }
-
+#title {
+  font-weight: 100;
+  font-size: 5rem;
+  text-shadow: 4px 4px 4px black;
+  margin-top: 10rem;
+}
 @media only screen and (max-width: 425px) {
   #card {
     margin-left: 10%;
