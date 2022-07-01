@@ -114,6 +114,11 @@ div#houses-listing {
     --bs-gutter-x: 1.5rem;
   }
 }
+iframe {
+  width: 30rem;
+  height: 20rem;
+  filter: invert();
+}
 
 @media only screen and (max-width: 425px) {
   #card {
@@ -125,6 +130,11 @@ div#houses-listing {
   }
   .p-3 {
     padding: 0.8rem !important;
+  }
+  iframe {
+    width: 15rem;
+    height: 20rem;
+    filter: invert();
   }
 }
 @media only screen and (max-width: 1119px) and (min-width: 428px) {
