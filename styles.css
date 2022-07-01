@@ -27,7 +27,7 @@ section {
 }
 
 #landing {
-  background-image: url(/assets/images/pexels-dom-j-303059.jpg);
+  background-image: url(/assets/images/pexels-dom-j-303059\ .jpg);
   background-position: center;
   background-size: cover;
   min-height: 80vh;
