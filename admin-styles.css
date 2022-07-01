@@ -1,6 +1,13 @@
 img {
   width: 200px;
 }
+@font-face {
+  font-family: new-font;
+  src: url(/assets/fonts/Finlandica-Italic-VariableFont_wght.ttf);
+}
+body {
+  font-family: new-font;
+}
 @media only screen and (max-width: 1000px) {
   tr {
     display: flex;
