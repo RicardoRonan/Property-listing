@@ -19,10 +19,12 @@ section {
   text-shadow: 3px 3px 3px black;
   margin-top: 15rem;
 }
-#title-conatainer {
+#title-container {
   margin-top: 3rem;
 }
-.btn { border-radius: 1px solid white;} 
+.btn {
+  border-radius: 1px solid white !important;
+}
 
 #landing {
   background-image: url(/assets/images/pexels-dom-j-303059.jpg);
@@ -35,11 +37,11 @@ section {
   min-height: 100vh;
 }
 #card {
-  margin-left: 10%;
+  margin-left: 10% !important;
   margin-right: 2rem;
   width: 80%;
-  height: 12rem;
-  margin-top: -4rem;
+  height: 16rem;
+  margin-top: -4rem !important;
 }
 #card-content {
   opacity: 1;
@@ -79,20 +81,22 @@ div#houses-listing {
     margin-left: 10%;
     margin-right: 2rem;
     width: 80%;
-    height: 30rem;
+    height: 20rem;
     margin-top: -8rem;
   }
   input {
     width: 100%;
   }
+
+  #listing-card {
+    height: 35rem;
+    width: 20rem;
+  }
   div#houses-listing {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-  }
-  #listing-card {
-    height: 35rem;
-    width: 20rem;
+    margin-left: -0.5rem;
   }
 }
 @media only screen and (max-width: 1285.6px) {
@@ -100,7 +104,7 @@ div#houses-listing {
     margin-left: 10%;
     margin-right: 2rem;
     width: 80%;
-    height: 29rem;
+    height: 18rem;
     margin-top: -8rem;
   }
   #row {
@@ -108,5 +112,15 @@ div#houses-listing {
   }
   #row-2 {
     --bs-gutter-x: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  #card {
+    margin-left: 10%;
+    margin-right: 2rem;
+    width: 80%;
+    height: 40rem;
+    margin-top: -8rem;
   }
 }
