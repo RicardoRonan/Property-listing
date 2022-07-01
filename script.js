@@ -2,6 +2,7 @@ let houses = JSON.parse(localStorage.getItem("houses"))
   ? JSON.parse(localStorage.getItem("houses"))
   : [
       {
+        id: 1,
         title: "Light and Modern Apartment",
         location: "Indonesia",
         bedrooms: 3,
@@ -14,6 +15,7 @@ let houses = JSON.parse(localStorage.getItem("houses"))
         listing: "For Rent",
       },
       {
+        id: 2,
         title: "Design Apartment",
         location: "China",
         bedrooms: 2,
@@ -26,6 +28,7 @@ let houses = JSON.parse(localStorage.getItem("houses"))
         listing: "For Rent",
       },
       {
+        id: 3,
         title: "Studio",
         location: "Malaysia",
         bedrooms: 3,
@@ -38,6 +41,7 @@ let houses = JSON.parse(localStorage.getItem("houses"))
         listing: "For Rent",
       },
       {
+        id: 4,
         title: "Open plan Studio",
         location: "China",
         bedrooms: 1,
@@ -50,6 +54,7 @@ let houses = JSON.parse(localStorage.getItem("houses"))
         listing: "For Rent",
       },
       {
+        id: 5,
         title: "Apartment Nice View",
         location: "Philippines",
         bedrooms: 3,
@@ -62,6 +67,7 @@ let houses = JSON.parse(localStorage.getItem("houses"))
         listing: "For Rent",
       },
       {
+        id: 6,
         title: "White and Gold styled Apartment",
         location: "Indonesia",
         bedrooms: 4,
@@ -74,6 +80,7 @@ let houses = JSON.parse(localStorage.getItem("houses"))
         listing: "For Sale",
       },
       {
+        id: 7,
         title: "Retro Styled Apartment",
         location: "India",
         bedrooms: 1,
@@ -86,6 +93,7 @@ let houses = JSON.parse(localStorage.getItem("houses"))
         listing: "For Rent ",
       },
       {
+        id: 8,
         title: "Spacious Apartment",
         location: "China",
         bedrooms: 4,
@@ -98,6 +106,7 @@ let houses = JSON.parse(localStorage.getItem("houses"))
         listing: "For Sale",
       },
       {
+        id: 9,
         title: "Open Planned Aesthetic Apartment ",
         location: "Syria",
         bedrooms: 2,
@@ -110,6 +119,7 @@ let houses = JSON.parse(localStorage.getItem("houses"))
         listing: "For Sale",
       },
       {
+        id: 10,
         title: " Modern Simplistic Apartment",
         location: "Philippines",
         bedrooms: 2,
@@ -122,7 +132,6 @@ let houses = JSON.parse(localStorage.getItem("houses"))
         listing: "For Rent",
       },
     ];
-
 function showHouses(houses) {
   document.querySelector("#houses-listing").innerHTML = "";
   houses.forEach((home, i) => {
