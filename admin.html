@@ -28,6 +28,51 @@
         Add Listing
     </button>
           <a href="/index.html"> <button class="btn btn-outline-light">Landing</button></a>
+
+           <div id="card" class="card bg-dark text-light p-2 m-1 mb-4 text-center shadow">
+      <div class="row p-2" id="card-content">
+      
+        <p class="text-light text-center">Click these buttons to filter through properties</p>
+        <div class="col-lg-3">
+          
+              <p>looking for</p>
+              <button  class="btn btn-outline-light m-2" onclick="allTypes()">Any</button>
+              <button class="btn btn-outline-light m-2" onclick="displayStudio()">Studio</button>
+              <button class=" btn btn-outline-light m-2" onclick="displayApartment()" >Apartment</button>
+              
+            </select>
+          
+        </div>
+        <div class="col-lg-3">
+          <p>location</p>
+              <button class="btn btn-outline-light mb-1 m-1 " onclick="allCities() ">All cities</button>
+              <button class="btn btn-outline-light mb-1 m-1" onclick="displayIndonesia()">Indonesia</button>
+              <button class="btn btn-outline-light mb-1 m-1 " onclick="displayChina()" >China</button>
+              <button class="btn btn-outline-light mb-1 m-1 " onclick="displayMalaysia()">Malaysia</button>
+              <button class="btn btn-outline-light mb-1 m-1 " onclick="displayPhilippines()">Philippines</button>
+          </select>
+          </div>
+        
+        <div class="col-lg-3">
+          <p>Bedrooms</p>
+          
+          <button class="btn btn-outline-light mb-1" onclick="allBedrooms()">Any</button>  
+            <button class="btn btn-outline-light mb-1" onclick="displayBedroom1()">1</button>
+            <button class="btn btn-outline-light mb-1" onclick="displayBedroom2()">2</button>
+            <button class="btn btn-outline-light mb-1" onclick="displayBedroom3()">3</button>
+            <button class="btn btn-outline-light mb-1" onclick="displayBedroom4()">4</button>
+          </div>
+        
+        <div class="col-lg-3">
+          <p>Garage</p>
+          <button class="btn btn-outline-light" onclick="allgarages()">Any</button>
+          <button class="btn btn-outline-light" onclick="displayGarage1()">1</button>
+          <button class="btn btn-outline-light" onclick="displayGarage2()">2</button>
+          <button class="btn btn-outline-light" onclick="displayGarage3()">3</button>
+          </div>
+        </div>
+        </div>
+        </div>
     
 
       <!-- Modal -->
@@ -85,7 +130,8 @@
                </select>
               </div>
               <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label"
+                <label for="exampleForm
+                ControlInput1" class="form-label"
                   >Bathrooms</label>
                <select  class="btn form-control form-select btn-outline-light text-light" id="Bathrooms">
                 <option>1</option>

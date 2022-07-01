@@ -2,10 +2,8 @@ let houses = JSON.parse(localStorage.getItem("houses"))
   ? JSON.parse(localStorage.getItem("houses"))
   : [
       {
-        id: 1,
         title: "Light and Modern Apartment",
-        location:
-          "Gg. Ceroring, Tibubiu, Kec. Kerambitan, Kabupaten Tabanan, Bali 82161, Indonesia",
+        location: "Indonesia",
         bedrooms: 3,
         bathrooms: 2,
         garage: 1,
@@ -16,9 +14,8 @@ let houses = JSON.parse(localStorage.getItem("houses"))
         listing: "For Rent",
       },
       {
-        id: 2,
         title: "Design Apartment",
-        location: "Binzhou, Shaanxi, Xianyang, Shaanxi, China",
+        location: "China",
         bedrooms: 2,
         bathrooms: 1,
         garage: 1,
@@ -29,9 +26,8 @@ let houses = JSON.parse(localStorage.getItem("houses"))
         listing: "For Rent",
       },
       {
-        id: 3,
         title: "Studio",
-        location: "Kampung Gubah, 85000 Segamat District, Johor, Malaysia",
+        location: "Malaysia",
         bedrooms: 3,
         bathrooms: 1,
         garage: 1,
@@ -42,9 +38,8 @@ let houses = JSON.parse(localStorage.getItem("houses"))
         listing: "For Rent",
       },
       {
-        id: 4,
         title: "Open plan Studio",
-        location: "Wugong County, Xianyang, Shaanxi, China",
+        location: "China",
         bedrooms: 1,
         bathrooms: 2,
         garage: 1,
@@ -55,10 +50,8 @@ let houses = JSON.parse(localStorage.getItem("houses"))
         listing: "For Rent",
       },
       {
-        id: 5,
         title: "Apartment Nice View",
-        location:
-          "Saint Francis de Assisi Church, City of Naga, Cebu, Philippines",
+        location: "Philippines",
         bedrooms: 3,
         bathrooms: 1,
         garage: 1,
@@ -69,10 +62,8 @@ let houses = JSON.parse(localStorage.getItem("houses"))
         listing: "For Rent",
       },
       {
-        id: 6,
         title: "White and Gold styled Apartment",
-        location:
-          "Mandalaguna, Salopa, Tasikmalaya Regency, West Java, Indonesia",
+        location: "Indonesia",
         bedrooms: 4,
         bathrooms: 2,
         garage: 2,
@@ -83,9 +74,8 @@ let houses = JSON.parse(localStorage.getItem("houses"))
         listing: "For Sale",
       },
       {
-        id: 7,
         title: "Retro Styled Apartment",
-        location: "Sant Nagar, Saharsa, Bihar 852201, India",
+        location: "India",
         bedrooms: 1,
         bathrooms: 1,
         garage: 0,
@@ -96,9 +86,8 @@ let houses = JSON.parse(localStorage.getItem("houses"))
         listing: "For Rent ",
       },
       {
-        id: 8,
         title: "Spacious Apartment",
-        location: "Changjiang District, Jingdezhen, Jiangxi, China",
+        location: "China",
         bedrooms: 4,
         bathrooms: 3,
         garage: 2,
@@ -109,9 +98,8 @@ let houses = JSON.parse(localStorage.getItem("houses"))
         listing: "For Sale",
       },
       {
-        id: 9,
         title: "Open Planned Aesthetic Apartment ",
-        location: "Al Busayrah, Syria",
+        location: "Syria",
         bedrooms: 2,
         bathrooms: 2,
         garage: 1,
@@ -122,9 +110,8 @@ let houses = JSON.parse(localStorage.getItem("houses"))
         listing: "For Sale",
       },
       {
-        id: 10,
         title: " Modern Simplistic Apartment",
-        location: "Manuel del Valle Sr., Quezon, Philippines",
+        location: "Philippines",
         bedrooms: 2,
         bathrooms: 1,
         garage: 0,
@@ -259,7 +246,7 @@ function delItem(id) {
 
 // Filter All
 function allCities() {
-  showHouses(houses);
+  showTable(houses);
 }
 
 // Filter City
@@ -267,92 +254,92 @@ function displayIndonesia() {
   const display = houses.filter((house) => {
     return house.location === "Indonesia";
   });
-  showHouses(display);
+  showTable(display);
 }
 function displayChina() {
   const display = houses.filter((house) => {
     return house.location === "China";
   });
-  showHouses(display);
+  showTable(display);
 }
 function displayMalaysia() {
   const display = houses.filter((house) => {
     return house.location === "Malaysia";
   });
-  showHouses(display);
+  showTable(display);
 }
 function displayPhilippines() {
   const display = houses.filter((house) => {
     return house.location === "Philippines";
   });
-  showHouses(display);
+  showTable(display);
 }
 
 function allTypes() {
-  showHouses(houses);
+  showTable(houses);
 }
 // Filter Type
 function displayStudio() {
   const show = houses.filter((house) => {
     return house.type === "Studio";
   });
-  showHouses(show);
+  showTable(show);
 }
 function displayApartment() {
   const show = houses.filter((house) => {
     return house.type === "Apartment";
   });
-  showHouses(show);
+  showTable(show);
 }
 
 // Filter Bedrooms
 function allBedrooms() {
-  showHouses(houses);
+  showTable(houses);
 }
 function displayBedroom1() {
   const display = houses.filter((house) => {
     return house.bedrooms === 1;
   });
-  showHouses(display);
+  showTable(display);
 }
 function displayBedroom2() {
   const display = houses.filter((house) => {
     return house.bedrooms === 2;
   });
-  showHouses(display);
+  showTable(display);
 }
 function displayBedroom3() {
   const display = houses.filter((house) => {
     return house.bedrooms === 3;
   });
-  showHouses(display);
+  showTable(display);
 }
 function displayBedroom4() {
   const display = houses.filter((house) => {
     return house.bedrooms === 4;
   });
-  showHouses(display);
+  showTable(display);
 }
 // Filter Garages
 function allgarages() {
-  showHouses(houses);
+  showTable(houses);
 }
 
 function displayGarage1() {
   const display = houses.filter((house) => {
     return house.garage === 1;
   });
-  showHouses(display);
+  showTable(display);
 }
 function displayGarage2() {
   const display = houses.filter((house) => {
     return house.garage === 2;
   });
-  showHouses(display);
+  showTable(display);
 }
 function displayGarage3() {
   const display = houses.filter((house) => {
     return house.garage === 3;
   });
-  showHouses(display);
+  showTable(display);
 }
