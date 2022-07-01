@@ -132,6 +132,7 @@ let houses = JSON.parse(localStorage.getItem("houses"))
         listing: "For Rent",
       },
     ];
+
 function showTable(houses) {
   document.querySelector("#displayTable").innerHTML = "";
   houses.forEach((home, i) => {
@@ -139,19 +140,19 @@ function showTable(houses) {
     <tr>
     <div class="row>
     <div class= "col-6">
-    <td><input class="form-control" id="${home.id}"${home.id} value=${home.id} disabled/></td>
-    <td><input class="form-control" id="Title${home.id}"${home.title}  value=${home.title} disabled/></td>
-    <td><input class="form-control" id="Location${home.id}"${home.location}  value=${home.location} disabled/></td>
-    <td><input class="form-control" id="Bedrooms${home.id}"${home.bedrooms}  value=${home.bedrooms} disabled/></td>
-    <td><input class="form-control" id="Bathrooms${home.id}"${home.bathrooms}  value=${home.bathrooms} disabled/></td>
-    <td><input class="form-control" id="Garage${home.id}"${home.garage}  value=${home.garage} disabled/></td>
+    <td><input class="form-control" id="${home.id}"${home.id} value="${home.id}" disabled/></td>
+    <td><input class="form-control" id="Title${home.id}"${home.title}  value="${home.title}" disabled/></td>
+    <td><input class="form-control" id="Location${home.id}"${home.location}  value="${home.location}" disabled/></td>
+    <td><input class="form-control" id="Bedrooms${home.id}"${home.bedrooms}  value="${home.bedrooms}" disabled/></td>
+    <td><input class="form-control" id="Bathrooms${home.id}"${home.bathrooms}  value="${home.bathrooms}" disabled/></td>
+    <td><input class="form-control" id="Garage${home.id}"${home.garage}  value="${home.garage}" disabled/></td>
     </div>
     <div class= "col-6">
-    <td><input class="form-control" id="Area${home.id}"${home.area}  value=${home.area} disabled/></td>
-    <td><input class="form-control" id="Type${home.id}"${home.type}  value=${home.type} disabled/></td>
-    <td><input class="form-control" id="Img${home.id}" value=${home.img} disabled <img src=${home.img} id="img"/></td>
+    <td><input class="form-control" id="Area${home.id}"${home.area}  value="${home.area}" disabled/></td>
+    <td><input class="form-control" id="Type${home.id}"${home.type}  value="${home.type}" disabled/></td>
+    <td><input class="form-control" id="Img${home.id}" value="${home.img}" disabled <img src=${home.img} id="img"/></td>
     <td><input class="form-control" id="Price${home.id}"${home.price}  value=${home.price} disabled/></td>
-    <td><input class="form-control" id="Listing${home.id}"${home.listing}  value=${home.listing} disabled/></td>
+    <td><input class="form-control" id="Listing${home.id}"${home.listing}  value="${home.listing}" disabled/></td>
     <td><i class="fa-solid fa-delete-left"  onclick="delItem(${home.id})"></i>
     <i class="fa-solid fa-pen-to-square" id="edit${home.id}" onclick="editItem(${home.id})"></i>
     <i class="fa-solid fa-floppy-disk" id="save${home.id}" onclick="updateItem(${home.id})">
