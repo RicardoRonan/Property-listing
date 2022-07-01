@@ -123,4 +123,16 @@ div#houses-listing {
     height: 40rem;
     margin-top: -8rem;
   }
+  .p-3 {
+    padding: 0.8rem !important;
+  }
+}
+@media only screen and (max-width: 1119px) and (min-width: 428px) {
+  #card {
+    margin-left: 10%;
+    margin-right: 2rem;
+    width: 80%;
+    height: 40rem;
+    margin-top: -8rem;
+  }
 }
